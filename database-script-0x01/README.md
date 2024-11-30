@@ -121,8 +121,8 @@ Usage
 
 
 ---
-
-Notes
+```
+## Notes
 
 The schema is designed to be in Third Normal Form (3NF), ensuring minimal redundancy and maintaining data integrity.
 

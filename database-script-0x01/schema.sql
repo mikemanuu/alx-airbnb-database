@@ -1,10 +1,8 @@
 -- Create User Table
 CREATE TABLE User (
     User ID INT AUTO_INCREMENT PRIMARY KEY,
-    FirstName VARCHAR(50) NOT NULL,
-    LastName VARCHAR(50) NOT NULL,
+    Name VARCHAR(50) NOT NULL,
     Email VARCHAR(100) NOT NULL,
-    PasswordHash VARCHAR(50) NOT NULL,
     Phone VARCHAR(15),
     Role ENUM('Admin', 'Host', 'Guest'), NOT NULL DEFAULT 'Guest'
     CreatedAt DATE NOT NULL
@@ -14,10 +12,11 @@ CREATE TABLE User (
 CREATE TABLE Property (
     PropertyID INT AUTO_INCREMENT PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,
-    Description TEXT NOT NULL,
+    Location VARCHAR(100) NOT NULL,
+    Type VARCHAR(100)
     Price DECIMAL(10, 2) NOT NULL,
-    CreatedTime DATE NOT NULL,
-    UpdatedTime DATE NOT NULL
+    CreatedTime DATETIME NOT NULL,
+    UpdatedTime DATETIME NOT NULL
 );
 
 --Create Booking Table
