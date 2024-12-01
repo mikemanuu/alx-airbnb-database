@@ -12,3 +12,9 @@ CREATE INDEX idx_booking_property_id ON Booking(PropertyID);
 
 --Index on PropertyID for Property table
 CREATE INDEX idx_property_id ON Property(PropertyID);
+
+--Measure query perfotmance before indexing using EXPLAIN $ ANALYZE
+EXPLAIN SELECT * FROM User INNER JOIN Booking ON User.UserID = Booking.UserID;
+
+--Measure query perfotmance after indexing using EXPLAIN $ ANALYZE
+EXPLAIN SELECT * FROM User INNER JOIN Booking ON User.UserID = Booking.UserID;
