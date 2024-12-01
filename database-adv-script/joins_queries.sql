@@ -33,7 +33,7 @@ FROM
 LEFT JOIN
     Reveiw
 ON
-    Property.PropertyID = Reveiw.BookingID;
+    Property.PropertyID = Reveiw.BookingID ORDER BY DESC;
 
 --Retrieves all users and all bookings, even if the user has no booking or a booking is noy linked to a user (FULL OUTER JOIN)
 
