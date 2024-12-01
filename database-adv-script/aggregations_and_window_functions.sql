@@ -20,8 +20,8 @@ SELECT
     Property.PropertyID,
     Property.Name AS PropertyName,
     COUNT(Booking.BookingID) AS TotalBookings,
-    ROW_NUMBER() OVER (ORDER BY COUNT(Booking.BookingID) DESC)
-AS RANK 
+    RANK() OVER (ORDER BY COUNT(Booking.BookingID) DESC)
+AS Rank
 FROM
     Property
 LEFT JOIN
